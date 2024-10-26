@@ -1,0 +1,482 @@
+package perulangan;
+import java.util.Scanner;
+public class FinalProjectBPETS {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        String nama;
+        int pin, totalPemasukan=0; 
+        int menuUtama, pilih1, pilih2, pilih3=0,ubahHarga, hargaBaru, jumlah, total=0, grandTotal=0, bayar, kembalian=0;
+        //deklarasi variabel ayam
+        
+        int hargaAyamPaha = 13000, hargaAyamDada = 13000, hargaAtiAmpelaAyam = 10000;
+        //deklarasi variabel bebek
+        int hargaBebekPaha= 14000, hargaBebekDada = 14000, hargaBebekKepala = 10000;
+        //deklrasi variabel ikan
+        int hargaIkanLele = 9000, hargaIkanMujair = 10000;
+        //deklarasi menu tambahan
+        int hargaTelur = 3000, hargaTahu = 2000, hargaTempe = 2000, hargaNasi = 5000; 
+        //deklarasi minuman
+        int hargaEsTeh=3000, hargaTehAnget=3000, hargaEsJeruk=4000, hargaJerukAnget=4000;
+        System.out.println(" ----- Warung Bebek Purnama ----- ");
+        System.out.println("JL. Gunung Anyar Lor No 60, Surabaya");
+        System.out.println("====================================");
+        do{
+            System.out.println("\nMenu Utama");
+            System.out.println("1. Kasir");
+            System.out.println("2. Admin");
+            System.out.println("3. Owner");
+            System.out.println("4. Exit");
+            System.out.print("Pilih Menu = ");
+            menuUtama=sc.nextInt();
+            System.out.println(" ");
+            switch(menuUtama){
+                case 1:
+                    grandTotal=0;
+                    do{
+                        System.out.println("---------- Menu Kasir ----------");
+                        System.out.println("Daftar Menu Utama");
+                        System.out.println("1. Ayam");
+                        System.out.println("2. Bebek");
+                        System.out.println("3. Ikan");
+                        System.out.println("4. Menu tambahan");
+                        System.out.println("5. Minuman");
+                        System.out.println("6. Exit");
+                        System.out.print("Pilih Menu = ");
+                        pilih1 = sc.nextInt();
+                        System.out.println(" ");
+                        switch(pilih1){
+                            case 1:
+                                do{
+                                    System.out.println("------------ Ayam ------------");
+                                    System.out.println("1. Ayam Paha        [Rp." +hargaAyamPaha+ "]");
+                                    System.out.println("2. Ayam Dada        [Rp." +hargaAyamDada+ "]");
+                                    System.out.println("3. Ati Ampela       [Rp." +hargaAtiAmpelaAyam+ "]");
+                                    System.out.println("4. Exit");
+                                    System.out.print("Pilih = ");
+                                    pilih2 = sc.nextInt();
+                                    switch(pilih2){
+                                        case 1:
+                                            System.out.print("Ayam Paha        x");
+                                            jumlah=sc.nextInt();
+                                            total=hargaAyamPaha*jumlah;
+                                            grandTotal=grandTotal+total;
+                                            System.out.println("Total       = "+total);
+                                            System.out.println("Grand Total = "+grandTotal);
+                                            System.out.println(" ");
+                                            break;
+                                        case 2:
+                                            System.out.print("Ayam Dada        x");
+                                            jumlah=sc.nextInt();
+                                            total=hargaAyamDada*jumlah;
+                                            grandTotal=grandTotal+total;
+                                            System.out.println("Total       = "+total);
+                                            System.out.println("Grand Total = "+grandTotal);
+                                            System.out.println(" ");
+                                            break;
+                                        case 3:
+                                            System.out.print("Ati Ampela Ayam  x");
+                                            jumlah=sc.nextInt();
+                                            total=hargaAtiAmpelaAyam*jumlah;
+                                            grandTotal=grandTotal+total;
+                                            System.out.println("Total       = "+total);
+                                            System.out.println("Grand Total = "+grandTotal);
+                                            System.out.println(" ");
+                                            break;
+                                        case 4:
+                                            System.out.println("Exit..");
+                                            break;
+                                        default:
+                                            System.out.println("Pilihan Tidak Ada!"); 
+                                    }
+                                }while(pilih2!=4);
+                                break;
+                            case 2:
+                                do{
+                                    System.out.println("------------ Bebek ------------");
+                                    System.out.println("1. Bebek Paha        [Rp." +hargaBebekPaha+ "]");
+                                    System.out.println("2. Bebek Dada        [Rp." +hargaBebekDada+ "]");
+                                    System.out.println("3. Bebek Kepala      [Rp." +hargaBebekKepala+ "]");
+                                    System.out.println("4. Exit");
+                                    System.out.print("Pilih = ");
+                                    pilih2 = sc.nextInt();
+                                    switch(pilih2){
+                                        case 1:
+                                            System.out.print("Bebek Paha       x");
+                                            jumlah=sc.nextInt();
+                                            total=hargaBebekPaha*jumlah;
+                                            grandTotal=grandTotal+total;
+                                            System.out.println("Total       = "+total);
+                                            System.out.println("Grand Total = "+grandTotal);
+                                            System.out.println(" ");
+                                            break;
+                                        case 2:
+                                            System.out.print("Bebek Dada       x");
+                                            jumlah=sc.nextInt();
+                                            total=hargaBebekDada*jumlah;
+                                            grandTotal=grandTotal+total;
+                                            System.out.println("Total       = "+total);
+                                            System.out.println("Grand Total = "+grandTotal);
+                                            System.out.println(" ");
+                                            break;
+                                        case 3:
+                                            System.out.print("Bebek Kepala     x");
+                                            jumlah=sc.nextInt();
+                                            total=hargaBebekKepala*jumlah;
+                                            grandTotal=grandTotal+total;
+                                            System.out.println("Total       = "+total);
+                                            System.out.println("Grand Total = "+grandTotal);
+                                            System.out.println(" ");
+                                            break;
+                                        case 4:
+                                            System.out.println("Exit..");
+                                            break;
+                                        default:
+                                            System.out.println("Pilihan Tidak Ada!"); 
+                                    }
+                                }while(pilih2!=4);
+                                
+                                break;
+                            case 3:
+                                do{
+                                    System.out.println("------------ Ikan ------------");
+                                    System.out.println("1. Ikan Lele        [Rp." +hargaIkanLele+ "]");
+                                    System.out.println("2. Ikan Mujair      [Rp." +hargaIkanMujair+ "]");
+                                    System.out.println("3. Exit");
+                                    System.out.print("Pilih = ");
+                                    pilih2 = sc.nextInt();
+                                    switch(pilih2){
+                                        case 1:
+                                            System.out.print("Ikan Lele        x");
+                                            jumlah=sc.nextInt();
+                                            total=hargaIkanLele*jumlah;
+                                            grandTotal=grandTotal+total;
+                                            System.out.println("Total       = "+total);
+                                            System.out.println("Grand Total = "+grandTotal);
+                                            System.out.println(" ");
+                                            break;
+                                        case 2:
+                                            System.out.print("Ikan Mujair      x");
+                                            jumlah=sc.nextInt();
+                                            total=hargaIkanMujair*jumlah;
+                                            grandTotal=grandTotal+total;
+                                            System.out.println("Total       = "+total);
+                                            System.out.println("Grand Total = "+grandTotal);
+                                            System.out.println(" ");
+                                            break;
+                                        case 3:
+                                            System.out.println("Exit..");
+                                            break;
+                                        default:
+                                            System.out.println("Pilihan Tidak Ada!"); 
+                                    }
+                                }while(pilih2!=3);
+                                break;
+                            case 4:
+                                do{
+                                    System.out.println("--------- Menu Tambahan ---------");
+                                    System.out.println("1. Telur Dadar      [Rp." +hargaTelur+ "]");
+                                    System.out.println("2. Telur Ceplok     [Rp." +hargaTelur+ "]");
+                                    System.out.println("3. Tahu             [Rp." +hargaTahu+ "]");
+                                    System.out.println("4. Tempe            [Rp." +hargaTempe+ "]");
+                                    System.out.println("5. Nasi Putih       [Rp." +hargaNasi+ "]");
+                                    System.out.println("6. Exit");
+                                    System.out.print("Pilih = ");
+                                    pilih2 = sc.nextInt();
+                                    switch(pilih2){
+                                        case 1:
+                                            System.out.print("Telur Dadar      x");
+                                            jumlah=sc.nextInt();
+                                            total=hargaTelur*jumlah;
+                                            grandTotal=grandTotal+total;
+                                            System.out.println("Total       = "+total);
+                                            System.out.println("Grand Total = "+grandTotal);
+                                            System.out.println(" ");
+                                            break;
+                                        case 2:
+                                            System.out.print("Telur Ceplok     x");
+                                            jumlah=sc.nextInt();
+                                            total=hargaTelur*jumlah;
+                                            grandTotal=grandTotal+total;
+                                            System.out.println("Total       = "+total);
+                                            System.out.println("Grand Total = "+grandTotal);
+                                            System.out.println(" ");
+                                            break;
+                                        case 3:
+                                            System.out.print("Tahu             x");
+                                            jumlah=sc.nextInt();
+                                            total=hargaTahu*jumlah;
+                                            grandTotal=grandTotal+total;
+                                            System.out.println("Total       = "+total);
+                                            System.out.println("Grand Total = "+grandTotal);
+                                            System.out.println(" ");
+                                            break;
+                                        case 4:
+                                            System.out.print("Tempe            x");
+                                            jumlah=sc.nextInt();
+                                            total=hargaTempe*jumlah;
+                                            grandTotal=grandTotal+total;
+                                            System.out.println("Total       = "+total);
+                                            System.out.println("Grand Total = "+grandTotal);
+                                            System.out.println(" ");
+                                        case 5:
+                                            System.out.print("Nasi Putih       x");
+                                            jumlah=sc.nextInt();
+                                            total=hargaNasi*jumlah;
+                                            grandTotal=grandTotal+total;
+                                            System.out.println("Total       = "+total);
+                                            System.out.println("Grand Total = "+grandTotal);
+                                            System.out.println(" ");
+                                        case 6:
+                                            System.out.println("Exit..");
+                                            break;
+                                        default:
+                                            System.out.println("Pilihan Tidak Ada!"); 
+                                    }
+                                }while(pilih2!=6);
+                                break;
+                            case 5:
+                                do{
+                                    System.out.println("------------ Minuman ------------");
+                                    System.out.println("1. Es Teh           [Rp." +hargaEsTeh+ "]");
+                                    System.out.println("2. Teh Anget        [Rp." +hargaTehAnget+ "]");
+                                    System.out.println("3. Es Jeruk         [Rp." +hargaEsJeruk+ "]");
+                                    System.out.println("4. Jeruk Anget      [Rp." +hargaJerukAnget+ "]");
+                                    System.out.println("5. Exit");
+                                    System.out.print("Pilih = ");
+                                    pilih2 = sc.nextInt();
+                                    switch(pilih2){
+                                        case 1:
+                                            System.out.print("Es Teh           x");
+                                            jumlah=sc.nextInt();
+                                            total=hargaEsTeh*jumlah;
+                                            grandTotal=grandTotal+total;
+                                            System.out.println("Total       = "+total);
+                                            System.out.println("Grand Total = "+grandTotal);
+                                            System.out.println(" ");
+                                            break;
+                                        case 2:
+                                            System.out.print("Teh Anget        x");
+                                            jumlah=sc.nextInt();
+                                            total=hargaTehAnget*jumlah;
+                                            grandTotal=grandTotal+total;
+                                            System.out.println("Total       = "+total);
+                                            System.out.println("Grand Total = "+grandTotal);
+                                            System.out.println(" ");
+                                            break;
+                                        case 3:
+                                            System.out.print("Es Jeruk         x");
+                                            jumlah=sc.nextInt();
+                                            total=hargaEsJeruk*jumlah;
+                                            grandTotal=grandTotal+total;
+                                            System.out.println("Total       = "+total);
+                                            System.out.println("Grand Total = "+grandTotal);
+                                            System.out.println(" ");
+                                            break;
+                                        case 4:
+                                            System.out.print("Jeruk Anget      x");
+                                            jumlah=sc.nextInt();
+                                            total=hargaJerukAnget*jumlah;
+                                            grandTotal=grandTotal+total;
+                                            System.out.println("Total       = "+total);
+                                            System.out.println("Grand Total = "+grandTotal);
+                                            System.out.println(" ");
+                                        case 5:
+                                            System.out.println("Exit..");
+                                            break;
+                                        default:
+                                            System.out.println("Pilihan Tidak Ada!"); 
+                                    }
+                                }while(pilih2!=5);
+                                break;
+                            case 6:
+                                do{
+                                    System.out.println("------------ Pembayaran ------------");
+                                    System.out.println("Total pembelian           = Rp." +grandTotal);
+                                    System.out.print("Uang yang dibayarkan      = Rp.");
+                                    bayar=sc.nextInt();
+                                    if(bayar>grandTotal){
+                                         kembalian=bayar-grandTotal;
+                                        System.out.println("Kembalian = Rp. "+kembalian);
+                                        totalPemasukan += grandTotal;
+                                    }else if(bayar==grandTotal){
+                                        System.out.println("Uang Anda pas");
+                                        totalPemasukan += grandTotal;
+                                        System.out.println("Kembalian = Rp. 0");
+                                    }else{
+                                        System.out.println("Uang Anda kurang..");
+                                    }
+                                }while(bayar<grandTotal);
+                                System.out.println("Terima Kasih...");
+                                break;
+                           
+                            default:
+                                System.out.println("Pilihan Tidak Ada!");
+                        }
+                    }while(pilih1!=6);
+                    break;
+                case 2:
+                    System.out.println("------------ Menu Admin ------------");
+                    System.out.println("Silahkan masukkan pin terlebih dahulu!");
+                    System.out.print("Pin           = "); 
+                    pin = sc.nextInt();
+                    if(pin==270505){
+                        do{
+                            System.out.println("Anda berhasil masuk");
+                            System.out.println(" ");
+                            System.out.println("----------- [ubah harga] -----------");
+                            System.out.println("1. Ayam bagian paha");
+                            System.out.println("2. Ayam bagian dada");
+                            System.out.println("3. Ati Ampela Ayam");
+                            System.out.println("4. Bebek bagian paha");
+                            System.out.println("5. Bebek bagian dada");
+                            System.out.println("6. Bebek bagian kepala");
+                            System.out.println("7. Ikan lele");
+                            System.out.println("8. Ikan Mujair");
+                            System.out.println("9. Telur");
+                            System.out.println("10.Tahu");
+                            System.out.println("11.Tempe");
+                            System.out.println("12.Nasi Putih");
+                            System.out.println("13.Es teh");
+                            System.out.println("14.Teh Anget");
+                            System.out.println("15.Es Jeruk");
+                            System.out.println("16.Jeruk Anget");
+                            System.out.println("17.Exit");
+                            System.out.print("Ubah Harga No = ");
+                            ubahHarga=sc.nextInt();
+                            switch(ubahHarga){
+                                case 1:
+                                System.out.println("Ayam Bagian Paha");
+                                System.out.print("Harga Baru  = Rp."); hargaBaru=sc.nextInt();
+                                hargaAyamPaha = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                    System.out.println("");
+                                    break;
+                                case 2:
+                                    System.out.println("Ayam Bagian Dada");
+                                System.out.print("Harga Baru  = Rp."); hargaBaru=sc.nextInt();
+                                hargaAyamDada = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                    System.out.println("");
+                                    break;
+                                case 3:
+                                    System.out.println("Ati Ampela Ayam");
+                                System.out.print("Harga Baru  = Rp."); hargaBaru=sc.nextInt();
+                                hargaAtiAmpelaAyam = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                    System.out.println(" ");
+                                    break;
+                                case 4:
+                                    System.out.println("Bebek Bagian Paha");
+                                System.out.print("Harga Baru  = Rp."); hargaBaru=sc.nextInt();
+                                hargaBebekPaha = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                    System.out.println(" ");
+                                    break;
+                                case 5:
+                                    System.out.println("Bebek Bagian Dada");
+                                System.out.print("Harga Baru  = Rp."); hargaBaru=sc.nextInt();
+                                hargaBebekDada = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                    System.out.println(" ");
+                                    break;
+                                case 6:
+                                    System.out.println("Bebek Bagian Kepala");
+                                System.out.print("Harga Baru  = Rp."); hargaBaru=sc.nextInt();
+                                hargaBebekKepala = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                    System.out.println(" ");
+                                    break;
+                                case 7:
+                                    System.out.println("Ikan Lele");
+                                System.out.print("Harga Baru  = Rp."); hargaBaru=sc.nextInt();
+                                hargaIkanLele = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                System.out.println(" ");
+                                    break;
+                                case 8:
+                                    System.out.println("Ikan Mujair");
+                                System.out.print("Harga Baru  = Rp."); hargaBaru=sc.nextInt();
+                                hargaIkanMujair = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                System.out.println(" ");
+                                    break;
+                                case 9:
+                                    System.out.println("Telur");
+                                System.out.print("Harga Baru  = Rp."); hargaBaru=sc.nextInt();
+                                hargaTelur = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                System.out.println(" ");
+                                    break;
+                                case 10:
+                                    System.out.println("Tahu");
+                                System.out.print("Harga Baru  = Rp."); hargaBaru=sc.nextInt();
+                                hargaTahu = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                System.out.println(" ");
+                                    break;
+                                case 11:
+                                    System.out.println("Tempe");
+                                System.out.print("Harga Baru  = Rp."); hargaBaru=sc.nextInt();
+                                hargaTempe = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                System.out.println(" ");
+                                    break;
+                                case 12:
+                                    System.out.println("Nasi Putih");
+                                System.out.print("Harga Baru  = Rp."); hargaBaru=sc.nextInt();
+                                hargaNasi = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                System.out.println(" ");
+                                    break;
+                                case 13:
+                                    System.out.println("Es Teh");
+                                System.out.print("Harga Baru  = Rp."); hargaBaru=sc.nextInt();
+                                hargaEsTeh = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                System.out.println(" ");
+                                    break;
+                                case 14:
+                                    System.out.println("Teh Anget");
+                                System.out.print("Harga Baru  = Rp."); hargaBaru=sc.nextInt();
+                                hargaTehAnget = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                System.out.println(" ");
+                                    break;
+                                case 15:
+                                    System.out.println("Es Jeruk");
+                                System.out.print("Harga Baru  = Rp."); hargaBaru=sc.nextInt();
+                                hargaEsJeruk = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                System.out.println(" ");
+                                    break;
+                                case 16:
+                                    System.out.println("Jeruk Anget");
+                                System.out.print("Harga Baru  = Rp."); hargaBaru=sc.nextInt();
+                                hargaJerukAnget = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                System.out.println(" ");
+                                    break;
+                                case 17:
+                                    System.out.println("Exit..");
+                                    break;   
+                                default:
+                                    System.out.println("Pilihan Tidak Ada!");
+                            }  
+                        }while(ubahHarga!=17);
+                    }else
+                        System.out.println("Pin Salah!");
+                    break;
+                case 3:
+                    System.out.println("---------- Menu Owner ----------");
+                    System.out.println("Total semua pemasukan Rp." +totalPemasukan);
+                    break;
+                case 4:
+                    System.out.println("Keluar dari progtam, See You :)...");
+                    break;
+                default:
+                    System.out.println("Pilihan Tidak Ada!");      
+            }
+        }while(menuUtama!=4);
+    }
+}
